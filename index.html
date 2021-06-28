@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>node</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Официальная документация">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+</head>
+<style>
+  table {
+    table-layout: fixed;    
+  }
+  td:last-child{
+    width: 1%;
+    white-space: nowrap;
+  }
+  td:nth-child(1) {
+    width: 20px;
+  }
+</style>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      el: '#app',
+      homepage: 'description.md',
+      repo: '',
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
+      subMaxLevel: 1,
+      sidebarDisplayLevel: 2,
+      relativePath: false,
+      auto2top: true,
+      name: '',
+      search: {
+        maxAge: 46400000, 
+        paths: 'auto',
+        placeholder: 'Search',
+        noData: 'Не найдено!',
+        depth: 6,
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+        // To avoid search index collision
+        // between multiple websites under the same domain
+        namespace: 'website-1'               
+      }
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+</script>
+</body>
+</html>
