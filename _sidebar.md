@@ -1,5 +1,5 @@
 -  [Node.js](description.md)
   - [Начало работы](node/node-introduction.md) 
-  - [Асинхронность](node/node-asynchrony.md)
+  - [Неблокирующий ввод/вывод](node/node-io.md)
+  - [Стандартные потоки ввода/вывода](node/node-stdio.md)  
   - [Глобальные объекты](node/node-global.md)
-  - [Стандартные потоки ввода/вывода](node/node-io.md)
