@@ -2,4 +2,4 @@
   - [Начало работы](node/node-introduction.md) 
   - [Неблокирующий ввод/вывод](node/node-io.md)
   - [Стандартные потоки ввода/вывода](node/node-stdio.md)  
-  - [Глобальные объекты](node/node-global.md)
+  - [Аргументы командной строки](node/node-argv.md)
