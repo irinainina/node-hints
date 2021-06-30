@@ -79,7 +79,7 @@ stdout.write(`Привет ${data.toString()}`)
   stdin.on('data', data => {
     const name = data.toString();
     const reverseName = name.split('').reverse().join('');
-    stdout.write(`\nТвоё имя наоборот ${reverseName}`);
+    stdout.write(`Твоё имя наоборот ${reverseName}`);
     process.exit();
   });
   ```
