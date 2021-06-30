@@ -17,7 +17,8 @@
 
 <details>
   <summary>Решение</summary>
-  
+
+
   ```js
   const stdout = process.stdout;
   const flag = process.argv[2];
@@ -27,8 +28,10 @@
   } else if(flag === '-f') {
     stdout.write(`${__filename}`);
   } else {
-    stdout.write(`Пожалуйста, запустите программу с флагом '-d' или '-f'`);
+    stdout.write('Пожалуйста, запустите программу с флагом -d или -f');
   }
   process.exit();
   ```
+
+
 </details>

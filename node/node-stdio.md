@@ -40,8 +40,8 @@ process.on('exit', () => stdout.write('Удачи в изучении Node.js!')
 
 <details>
   <summary>Решение</summary>
-  
-  ```js 
+
+```js 
   const stdout = process.stdout;
   const stdin = process.stdin;
 
@@ -51,7 +51,8 @@ process.on('exit', () => stdout.write('Удачи в изучении Node.js!')
     process.exit();
   });
   process.on('exit', () => stdout.write('Удачи!'));
-  ```
+```
+
 </details>
 
 ### Buffer
@@ -70,8 +71,8 @@ stdout.write(`Привет ${data.toString()}`)
 
 <details>
   <summary>Решение</summary>
-  
-  ```js
+
+```js
   const stdout = process.stdout;
   const stdin = process.stdin;
 
@@ -82,5 +83,6 @@ stdout.write(`Привет ${data.toString()}`)
     stdout.write(`\nТвоё имя наоборот ${reverseName}`);
     process.exit();
   });
-  ```
+```
+
 </details>

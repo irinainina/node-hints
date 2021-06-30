@@ -39,7 +39,10 @@
 2) Выведите в консоль строку "Hello, Node.js!" запустив под Node.js файл с кодом
 
 <details>
-  <summary>Решение</summary>
+<summary>Решение</summary>
 
-  `console.log("Hello, Node.js!");`
+```js
+console.log("Hello, Node.js!");
+```
+
 </details>

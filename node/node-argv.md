@@ -37,9 +37,10 @@ const message = getValue('-m');
 Напишите программу, которая просит у пользователя ввести два числа, складывает эти числа, если запускается с флагом '-s', или перемножает, если запускается с флагом '-m' и завершает свою работу. Для ввода и вывода информации используйте стандартные потоки ввода/вывода
 
 <details>
-  <summary>Решение</summary>
-  
-  `
+<summary>Решение</summary>
+
+
+```js
   const stdout = process.stdout;
   const stdin = process.stdin;
   const flag = process.argv[2];
@@ -58,5 +59,6 @@ const message = getValue('-m');
     }
     process.exit();
   });
-  `
+```
+
 </details>
