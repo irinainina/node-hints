@@ -39,7 +39,7 @@ const message = getValue('-m');
 <details>
   <summary>Решение</summary>
   
-  ```js
+  `
   const stdout = process.stdout;
   const stdin = process.stdin;
   const flag = process.argv[2];
@@ -58,5 +58,5 @@ const message = getValue('-m');
     }
     process.exit();
   });
-  ```
+  `
 </details>

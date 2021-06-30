@@ -40,6 +40,6 @@
 
 <details>
   <summary>Решение</summary>
-  
-  ```console.log("Hello, Node.js!");```
+
+  `console.log("Hello, Node.js!");`
 </details>
