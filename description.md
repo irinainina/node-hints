@@ -14,7 +14,8 @@ Node.js используется для создания бекенда, API, с
 2. [Неблокирующий ввод/вывод](node/node-io.md)
 3. [Стандартные потоки ввода/вывода](node/node-stdio.md)
 4. [Аргументы командной строки](node/node-argv.md)
-5. [Доступ к файловой системе](node/node-fs-acces.md)
+5. [Доступ к файловой системе](node/node-fs-access.md)
+6. [Модули](node/node-module.md)
 
 
 

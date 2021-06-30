@@ -4,4 +4,4 @@
   - [Стандартные потоки ввода/вывода](node/node-stdio.md)  
   - [Аргументы командной строки](node/node-argv.md)
   - [Доступ к файловой системе](node/node-fs-access.md)
-  
+  - [Модули](node/node-module.md)
