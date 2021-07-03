@@ -18,13 +18,13 @@ Node.js используется для создания бекенда, API, с
 4. [Аргументы командной строки](node/node-argv.md)
 5. [Доступ к файловой системе](node/node-fs-access.md)
 6. [Модули](node/node-module.md)
-  6.1. [Модуль path](node/module/path.md)
-  6.2. [Модуль fs](node/module/fs.md)
-  6.3. [Модуль os](node/module/os.md)
-  6.4. [Модули, устанавливаемые через npm](node/module/npm-module.md)
-  6.5. [Создание собственных модулей](node/module/create-module.md)
+  - [Модуль path](node/module/path.md)
+  - [Модуль fs](node/module/fs.md)
+  - [Модуль os](node/module/os.md)
+  - [Модули, устанавливаемые через npm](node/module/npm-module.md)
+  - [Создание собственных модулей](node/module/create-module.md)
 7. [События](node/events.md)
-  7.1. [Приложение Таймер](node/timer.md)
+  - [Приложение Таймер](node/timer.md)
 
 
 ## Материалы

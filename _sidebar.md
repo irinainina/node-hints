@@ -11,3 +11,4 @@
       - [Модули, устанавливаемые через npm](node/module/npm-module.md)
       - [Создание собственных модулей](node/module/create-module.md)
   - [События](node/events.md)
+    - [Приложение Таймер](node/timer.md)
