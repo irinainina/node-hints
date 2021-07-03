@@ -7,7 +7,7 @@ const stdin = process.stdin;
 const stdout = process.stdout;
 stdin.on('data', data => stdout.write(data));
 ```  
-когда выводили сообщение при завершении работы программы
+и когда выводили сообщение при завершении работы программы
 ```js
 const stdout = process.stdout;
 process.on('exit', () => stdout.write('Удачи в изучении Node.js!'));
@@ -18,23 +18,26 @@ process.on('exit', () => stdout.write('Удачи в изучении Node.js!')
 ```js
 const EventEmitter = require('events');
 ```  
-Создадим объект `emitter`  
+На основе класса `EventEmitter` создадим объект `emitter`   
 ```js
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 ```  
 У него есть два метода:
-- `.emit` - прослушивание событий
-- `.on` - выполнение действий при наступлении события
+- `emit()` - прослушивание событий
+- `on()` - выполнение действий при наступлении события
 
-Первый аргумент метода `.on` - название события. Его мы придумываем сами. Второй аргумент - функция, которая сработает. когда событие произойдёт  
+У метода `on()` два аргумента.  
+Первый аргумент - название события. Его мы придумываем сами.  
+Второй аргумент - функция, которая сработает, когда событие произойдёт  
 ```js
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 emitter.on('start', () => console.log('Start'));
 ```  
+
 Мы зарегистрировали событие `'start'` у объекта `emitter`. Теперь нам нужно сгенерировать событие, сказать программе, что событие произошло.  
-Для этого вызываем метод `.emit`, аргументом которого указываем название события
+Для этого вызываем метод `emit()`, аргументом которого указываем название события
 ```js
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
@@ -44,13 +47,14 @@ emitter.emit('start');
 Запускаем файл с кодом, в консоли видим надпись 'Start'.
 Самостоятельно созданное событие работает.
 
-При вызове события в методе `.emit` можно передать какое-то сообщение. Это сообщение будет передано в качестве аргумента в функцию, которая вызывается внутри метода `.on`:
+При вызове события в методе `emit()` можно передать какое-то сообщение. Это сообщение будет передано в качестве аргумента в функцию, которая вызывается внутри метода `on()`:
 ```js
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 emitter.on('start', message => console.log(message));
 emitter.emit('start', 'Start message');
 ``` 
+
 Событие можно вызвать несколько раз
 ```js
 const EventEmitter = require('events');
@@ -60,7 +64,8 @@ emitter.emit('start', 'Start message1');
 emitter.emit('start', 'Start message2');
 emitter.emit('start', 'Start message3');
 ``` 
-Если хотим, чтобы событие вызывалось только один раз, используем метод `.once`
+
+Если хотим, чтобы событие вызывалось только один раз, используем метод `once()`
 ```js
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
@@ -69,7 +74,8 @@ emitter.emit('start', 'Start message1');
 emitter.emit('start', 'Start message2');
 emitter.emit('start', 'Start message3');
 ```  
-Убрать всех слушателей позволяет метод `.removeAllListeners`
+
+Убрать всех слушателей позволяет метод `removeAllListeners()`
 ```js
 const EventEmitter = require('events');
 const emitter = new EventEmitter();

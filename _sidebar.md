@@ -8,6 +8,6 @@
       - [Модуль path](node/module/path.md)
       - [Модуль fs](node/module/fs.md)
       - [Модуль os](node/module/os.md)
-      - [Модуль event](node/module/event.md)
       - [Модули, устанавливаемые через npm](node/module/npm-module.md)
       - [Создание собственных модулей](node/module/create-module.md)
+  - [События](node/events.md)
