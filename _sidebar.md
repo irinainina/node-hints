@@ -5,9 +5,9 @@
   - [Аргументы командной строки](node/node-argv.md)
   - [Доступ к файловой системе](node/node-fs-access.md)
   - [Модули](node/node-module.md)
-      - Стандартные модули
-        - [модуль path](node/module/path.md)
-        - [модуль fs](node/module/fs.md)
-        - [модуль os](module/os.md)
+      - [Модуль path](node/module/path.md)
+      - [Модуль fs](node/module/fs.md)
+      - [Модуль os](node/module/os.md)
+      - [Модуль event](node/module/event.md)
       - [Модули, устанавливаемые через npm](node/module/npm-module.md)
       - [Создание собственных модулей](node/module/create-module.md)
