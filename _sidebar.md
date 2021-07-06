@@ -16,3 +16,5 @@
     - [поток чтения](node/flow-read.md)
     - [поток записи](node/flow-write.md)
     - [поток чтения-записи](node/flow-read-write.md)
+  - [Проекты](node/projects/projects.md)
+      - [приложение для заметок](node/projects/notes.md)

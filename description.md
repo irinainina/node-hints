@@ -29,7 +29,8 @@ Node.js используется для создания бекенда, API, с
     - [поток чтения](node/flow-read.md)
     - [поток записи](node/flow-write.md)
     - [поток чтения-записи](node/flow-read-write.md)
-
+9. [Проекты](node/projects/projects.md)
+    - [приложение для заметок](node/projects/notes.md)
 
 ## Материалы
 - [Введение в node.js](http://imnotgenius.com/vvedeniya-v-node-js/)
@@ -39,6 +40,4 @@ Node.js используется для создания бекенда, API, с
 - [Руководства по Node.js](https://nodeguide.ru/doc/)
 - [Руководство по Node.js - metanit](https://metanit.com/web/nodejs/)
 - [Пишем API на Node.js](https://loftblog.ru/material/1-ustanavlivaem-node-pravilno/)
-- Школа разработки интерфейсов. Герман Волков
-  - [Node.js](https://youtu.be/qZ5xzkEdkhg)
-  - [Презентация](https://drive.google.com/file/d/1P3mRxOQISJHEatmAEv5X_f1Qk8OEr9rZ/view)
+- [Герман Волков. Node.js](https://youtu.be/qZ5xzkEdkhg) - [Презентация](https://drive.google.com/file/d/1P3mRxOQISJHEatmAEv5X_f1Qk8OEr9rZ/view)
