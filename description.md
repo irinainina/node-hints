@@ -31,7 +31,9 @@ Node.js используется для создания бекенда, API, с
     - [поток чтения-записи](node/flow-read-write.md)
 9. [Проекты](node/projects/projects.md)
     - [приложение для заметок](node/projects/notes.md)
+    - [приложение github](node/projects/github-app.md)
 
+    
 ## Материалы
 - [Введение в node.js](http://imnotgenius.com/vvedeniya-v-node-js/)
 - [Гайд по Node.js](https://nodejsdev.ru/guide/)
