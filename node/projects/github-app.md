@@ -36,17 +36,18 @@ github.getRepos(username, (error, repos) => {
 Импортируем модуль `https` и напишем код функции `getRepos()`. Параметр функции - `username` - имя пользователя GitHub.  
 У метода `https.get()` два параметра: URL, по которому отправляется запрос, и функция обратного вызова, принимающая один параметр - ответ сервера `responce`, сокращенно `res`.  
 Свойство `res.statusCode` возвращает ответ сервера. Ответ `200` свидетельствует об успешном подключении, любой другой говорит о проблеме с подключением.  
-Экспортируем модуль `github` как объект, со свойством `getRepos` и значением `getRepos`:  
+Экспортируем модуль `github` как объект, со свойством `getRepos` и значением `getRepos`:
+  
 ```js
-const https = require('https');
-
-function getRepos(username) {
-  https.get(`https://api.github.com/users/${username}/repos`, res => {
-    console.log(res.statusCode);
-  })
-}
-module.exports = {getRepos}
+  const https = require('https');
+  function getRepos(username) {
+    https.get(`https://api.github.com/users/${username}/repos`, res => {
+      console.log(res.statusCode);
+    })
+  }
+  module.exports = {getRepos}
 ```
+
 Запустим файл `app`. Аргументом командной строки при запуске файла укажем любой известный нам репозиторий:  
 ```
 node app goldbergyoni
