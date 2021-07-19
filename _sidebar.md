@@ -18,4 +18,5 @@
     - [поток чтения-записи](node/flow-read-write.md)
   - [Проекты](node/projects/projects.md)
       - [приложение для заметок](node/projects/notes.md)
+      - [Приложение для заметок: рефакторинг](node/projects/notes-refactoring.md)
       - [приложение github](node/projects/github-app.md)
