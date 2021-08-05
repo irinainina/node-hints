@@ -30,7 +30,7 @@ exports.NOTE_ALREADY_EXITS_ERROR = 'Заметка с таким заголов�
 1. В самом начале файла объявим наши импорты:
 
 ```js
-const { readFile } = require('fs/promises');
+const { readFile, writeFile } = require('fs/promises');
 const { writeFileSync, existsSync } = require('fs');
 const path = require('path');
 const { NOTE_NOT_FOUND_ERROR, NOTE_ALREADY_EXITS_ERROR } = require('./errors');
@@ -54,7 +54,7 @@ if (!existsSync(STORAGE_FILE_PATH)) {
 3. Для извлечения массива всех заметок из хранилища создадим функцию **getAll()**:
 
 ```js
-exports.getAll = async () => JSON.parse(await fs.readFile(STORAGE_FILE_PATH));
+exports.getAll = async () => JSON.parse(await readFile(STORAGE_FILE_PATH));
 ```
 
 Данная функция просто извлекает содержимое нашего json файла и преобразует в обычный javascript массив. Обратите внимание на сколько короче стала запись, по сравнению с версией использующей функции обратного вызова.
@@ -67,6 +67,9 @@ exports.getAll = async () => JSON.parse(await fs.readFile(STORAGE_FILE_PATH));
 exports.getOne = async (noteTitle) => {
   const notes = await this.getAll();
   const note = notes.find((note) => note.title === noteTitle);
+  if (!note) {
+    throw new Error(NOTE_NOT_FOUND_ERROR);
+  }
   return note;
 };
 ```
@@ -78,8 +81,11 @@ exports.getOne = async (noteTitle) => {
 ```js
 exports.create = async (note) => {
   const notes = await this.getAll();
+  if(notes.some(el => el.title === note.title)) {
+    throw new Error(NOTE_ALREADY_EXITS_ERROR);
+  }
   notes.push(note);
-  await fs.writeFile(STORAGE_FILE_PATH, JSON.stringify(notes));
+  await writeFile(STORAGE_FILE_PATH, JSON.stringify(notes));
 };
 ```
 
@@ -89,7 +95,7 @@ exports.create = async (note) => {
 exports.deleteOne = async (noteTitle) => {
   const notes = await this.getAll();
   const filtredNotes = notes.filter((note) => note.title !== noteTitle);
-  await fs.writeFile(STORAGE_FILE_PATH, JSON.stringify(filtredNotes));
+  await writeFile(STORAGE_FILE_PATH, JSON.stringify(filtredNotes));
 };
 ```
 
@@ -131,7 +137,7 @@ exports.remove = async (title) => {
 
 ```js
 const { program } = require('commander');
-const { create, list, view, remove } = require('./commands');
+const { create, list, view, remove } = require('./notes.commands');
 const { NOTE_VALIDATION_ERROR } = require('./errors');
 
 program
